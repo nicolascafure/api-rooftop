@@ -8,6 +8,7 @@ const [imageType, setImageType]=useState("pokemon")
 
 const getSelect=(e)=>{  
   setImageType(e.target.value)
+  console.log(e.target.value)
 }
 
 
@@ -29,9 +30,9 @@ const data = fetch(`https://fakerapi.it/api/v1/images?_quantity=1&_type=${imageT
       image={image}
       />
 
-<select name="select">
-  <option value="pokemon">Pokemons</option>
-  <option value="animals" selected>Animals</option>
+<select onChange={getSelect} name="select">
+  <option  value="pokemon">Pokemons</option>
+  <option  value="animals" selected>Animals</option>
   <option value="architecture">Architecture</option>
   <option value="nature">Nature</option>
   <option value="people">People</option>
