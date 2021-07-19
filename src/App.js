@@ -5,6 +5,7 @@ function App() {
 
 const [image, setImage]=useState({})
 const [imageType, setImageType]=useState("pokemon")
+const [books, setBooks]=useState({})
 
 const getSelect=(e)=>{  
   setImageType(e.target.value)
@@ -15,9 +16,18 @@ const getSelect=(e)=>{
 const consultarApi=()=>{
 const data = fetch(`https://fakerapi.it/api/v1/images?_quantity=1&_type=${imageType}&_height=300`)
 .then(data=>data.json())
-.then(resultado=>setImage(resultado.data[0]))
+.then(resultado=>console.log(resultado.data[0]))
 
 }
+
+
+const consultarApiLibros=()=>{
+  const data = fetch("https://fakerapi.it/api/v1/books?_quantity=10")
+  .then(data=>data.json())
+  .then(resultado=>setImage(resultado.data[0]))
+  
+  }
+
 
 
 
@@ -31,8 +41,8 @@ const data = fetch(`https://fakerapi.it/api/v1/images?_quantity=1&_type=${imageT
       />
 
 <select onChange={getSelect} name="select">
-  <option  value="pokemon">Pokemons</option>
-  <option  value="animals" selected>Animals</option>
+  <option selected value="pokemon">Pokemons</option>
+  <option  value="animals" >Animals</option>
   <option value="architecture">Architecture</option>
   <option value="nature">Nature</option>
   <option value="people">People</option>
@@ -40,9 +50,9 @@ const data = fetch(`https://fakerapi.it/api/v1/images?_quantity=1&_type=${imageT
   <option value="kittens">Kittens</option>
 </select>
 
-
-
       <button onClick={consultarApi}>Consultar api</button>
+
+      <button onClick={consultarApiLibros}>Consultar api libros</button>
 
     </div>
   );
