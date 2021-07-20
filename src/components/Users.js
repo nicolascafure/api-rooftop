@@ -12,13 +12,19 @@ fetch("https://fakerapi.it/api/v1/users?_quantity=10&_gender=male")
     return ( 
 <div className="contenedor-users">
 <button onClick={getUsers}>getUsers</button>
+<div className="user">
+<div className="user-data head">User Name</div>
+<div className="user-data head">First Name</div>
+<div className="user-data head">Last Name</div>
+<div className="user-data head">Email</div>
+</div>
 
 {users.map(user=><div key={user.uuid} className="user">
-<p className="user-data">{user.username}</p>
-<p className="user-data">{user.firstname}</p>
-<p className="user-data">{user.lastname}</p>
-<p className="user-data">{user.email}</p>
-<p className="user-data">{user.website}</p>
+<div className="user-data"><img className="img-user" src={user.image}></img>{user.username}</div>
+<div className="user-data">{user.firstname}</div>
+<div className="user-data">{user.lastname}</div>
+<div className="user-data">{user.email}</div>
+
 
 
 </div>)}
