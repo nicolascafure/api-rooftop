@@ -39,3 +39,38 @@ code {
   color: white;
   font-weight: 500;
 }
+
+.contenedor-nav{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.904);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-top {
+  width: 20%;
+}
+
+.contenedor-nav nav {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contenedor-nav nav a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0px 12px;
+  font-weight: 600;
+}
+
+.contenedor-nav nav a:hover{
+  color: rgb(199, 98, 4);
+}
