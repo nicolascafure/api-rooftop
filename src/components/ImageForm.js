@@ -2,7 +2,12 @@
 
  const ImageForm=()=>{
 
-const [image, setImage]=useState({})
+const [image, setImage]=useState({
+  title:"",
+  url: "",
+  description:""
+
+})
 const [imageType, setImageType]=useState("pokemon")
 
     const getSelect=(e)=>{  
@@ -31,16 +36,14 @@ return(
 </select>
 
       <button onClick={consultarApi}>Consultar api</button></div>
-    <div className="contenedor-imagen">
-
-
-
+      {image.title===""?null:<div className="contenedor-imagen">
 <h1>{image.title}</h1>
 <img src={image.url}></img>
 <p>{image.description}</p>
 
 
-</div>
+</div>}
+    
 </div>
 )
 
