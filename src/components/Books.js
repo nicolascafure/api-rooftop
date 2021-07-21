@@ -9,21 +9,22 @@
         
         }
     return(
-    
-        <div className="contenedor-books">
+    <>
+       <div className= "contenedor-component">
             <button onClick={consultarApiLibros}>Consultar api libros</button>
-
+            <div className="contenedor-books">
             {books.map(book=><div key={book.title} className="book">
-<p>{book.title}</p>
-<p>{book.author}</p>
-<p>{book.description}</p>
-<p>{book.genre}</p>
+<p><span className="subtitle">Title:</span> {book.title}</p>
+<p><span className="subtitle">Autor:</span>  {book.author}</p>
+<p><span className="subtitle">Description:</span>  {book.description}</p>
+<p><span className="subtitle">Genre:</span>  {book.genre}</p>
 
             </div>)}
 
 
         </div>
-
+        </div>
+</>
    
     )
     

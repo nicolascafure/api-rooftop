@@ -18,8 +18,9 @@ const [imageType, setImageType]=useState("pokemon")
       
       }
 return(
-    <div className="contenedor-imagen">
-<select onChange={getSelect} name="select">
+  <div className= "contenedor-component">
+
+    <div className="selectores-imagen"><select onChange={getSelect} name="select">
   <option selected value="pokemon">Pokemons</option>
   <option  value="animals" >Animals</option>
   <option value="architecture">Architecture</option>
@@ -29,7 +30,9 @@ return(
   <option value="kittens">Kittens</option>
 </select>
 
-      <button onClick={consultarApi}>Consultar api</button>
+      <button onClick={consultarApi}>Consultar api</button></div>
+    <div className="contenedor-imagen">
+
 
 
 <h1>{image.title}</h1>
@@ -37,6 +40,7 @@ return(
 <p>{image.description}</p>
 
 
+</div>
 </div>
 )
 

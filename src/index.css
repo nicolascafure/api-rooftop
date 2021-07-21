@@ -7,7 +7,7 @@ body {
   font-family: 'Orbitron', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(fondo .jpg);
+  background-image: url(fondo.jpg);
   background-size: cover;
 
 }
@@ -20,6 +20,8 @@ button{
   border-radius: 25px;
   font-family: 'Orbitron', sans-serif;
   cursor: pointer;
+  width: 80%;
+  margin: 15px 10px;
 
 }
 
@@ -89,4 +91,72 @@ color: white;
 
 .contenedor-nav nav a:hover{
   color: rgb(199, 98, 4);
+}
+
+.subtitle{
+  font-weight: 600;
+  color: chocolate;
+}
+
+.contenedor-books{
+display: flex;
+width: 100%;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+
+.book{
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  width: 40%;
+}
+
+.contenedor-component{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contenedor-users{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+
+}
+
+.contenedor-imagen{
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.contenedor-imagen img{
+  width: 40%;
+}
+
+.selectores-imagen{
+  width: 80%;
+  display: flex;
+}
+
+select{
+  padding: 1rem;
+  margin: 10px;
+border-radius: 25px;
+}
+
+select:hover{
+ background: rgba(230, 228, 227, 0.671);
 }

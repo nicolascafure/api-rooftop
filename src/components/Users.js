@@ -10,8 +10,9 @@ fetch("https://fakerapi.it/api/v1/users?_quantity=10&_gender=male")
     }
 
     return ( 
+        <div className= "contenedor-component">
+            <button onClick={getUsers}>getUsers</button>
 <div className="contenedor-users">
-<button onClick={getUsers}>getUsers</button>
 <div className="user">
 <div className="user-data head">User Name</div>
 <div className="user-data head">First Name</div>
@@ -30,6 +31,7 @@ fetch("https://fakerapi.it/api/v1/users?_quantity=10&_gender=male")
 </div>)}
 
     
+</div>
 </div>
 
      );
